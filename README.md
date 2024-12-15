@@ -1,62 +1,45 @@
-# plusコマンド
-![test](https://github.com/makino315/robosys2024/actions/workflows/test.yml/badge.svg)
+<!---
+  SPDX-FileCopyrightText:2024 Kazuki Makino <s23c1131km@s.chibakoudai.jp>
+  SPDX-License-Identifier: BSD-3-Clause
+ --->
 
-標準入力から読み込んだ数字を足す。
+[![test](https://github.com/makino315/robosys2024_work/actions/workflows/test.yml/badge.svg)](https://github.com/makino315/robosys2024_work/actions/workflows/test.yml)
+# その年がDisney何周年かが分かるコマンド
 
-# Symbolic Integral Calculator
-このソフトウェアは、与えられた関数のシンボリック定積分を計算するためのツールです。ユーザーは関数と積分区間を指定し、その区間における定積分結果を得ることができます。
+## 概略
+- このリポジトリは、Disneyが何周年かが分かる
+- 西暦を入力するとその年がDisney何周年かが出力されます。
+- 数字以外が入力されるとエラーが表示されます
 
-# 主な機能
-任意の関数の数式を入力として受け取り、シンボリック積分を実行。
-指定された区間における定積分の結果を分数形式で提供。
-入力エラーや数式エラーが発生した場合に適切なエラーメッセージを表示。
-
-# 動作環境
-OS: Windows, macOS, Linux
-Pythonバージョン: Python 3.8 以上
-必要なライブラリはsympy
-
-# インストール方法
-Pythonをインストール:
-Python 3.8以上をインストールしてください（公式サイト: https://www.python.org/）。
-必要なライブラリをインストール:
-ターミナルで以下のコマンドを実行してください。
-pip install sympy
-スクリプトをダウンロード:
-リポジトリからスクリプトをダウンロードします:
-git clone <リポジトリのURL>
-cd <ダウンロードしたフォルダ>
-
-# 使い方
-スクリプトの実行:
-ターミナルで以下のコマンドを実行します。
-echo -e "x**2\n0,1" | python integral.py
-これにより、関数 x**2 を区間 0 から 1 で積分した結果が表示されます。
-
-# 実行例
-以下のように入力を与えるとします。
-x**2
-0,1
-以下の結果が表示されます。
-f(x) = x**2 の区間 [0.0, 1.0] における定積分の結果: 1/3
-
-# テスト
-以下の関数と区間でテストを実施し、期待される結果が得られることを確認しています。
-関数x**2　区間0,1	結果1/3
-関数sin(x)	区間0,pi	結果2
-関数exp(x)	区間0,1	　　結果e - 1
-
-# ライセンス
-このソフトウェアはMITライセンスのもとで提供されます。
-
-# 謝辞
-このソフトウェアは、Pythonのライブラリ sympy を利用しています。
-開発およびテストに協力してくれた皆様に感謝いたします。
-
-## 必要なソフトウェア
+## 必要なツールおよびテスト設定
 - Python
-  - テスト済みバージョン: 3.7〜3.10
+  - テスト済みバージョン→3.6~3.11
+  - windows11 wsl2(Ubuntu20.04 LTS)
 
-## テスト環境
-- Ubuntu 24.04 LTS
+## クローンの仕方
+ターミナルで次のコマンドを入力してリポジトリをクローンしてください。
+```bash
+git clone https://github.com/yourusername/disney_anniversary.git
+cd disney_anniversary
+```
 
+## 実行の仕方
+ターミナルで以下のコマンドを実行します。
+```bash
+echo 2024 | python3 disney_anniversary
+```
+これにより、ディズニーの設立年からの経過年数が出力されます。
+- 出力例
+```bash
+ディズニーは 1923 年に設立され、今年で 101 周年です。
+```
+- エラーの場合（数字以外が入力された場合）
+```bash
+エラー: 有効な年を入力してください。
+```
+
+## ライセンス
+- このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます.
+- このパッケージのコードの一部は，下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを，本人の許可を得て自身の著作としたものです．
+  - [スライド](https://github.com/ryuichiueda/slides_marp/tree/master/)robosys2024
+- ©2024 Kazuki Makino
