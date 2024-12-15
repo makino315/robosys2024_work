@@ -7,26 +7,27 @@
 # その年がDisney何周年かが分かるコマンド
 
 ## 概略
-- このリポジトリは、Disneyが何周年かが分かる
+- このリポジトリは、Disneyが何周年かが分かります。
 - 西暦を入力するとその年がDisney何周年かが出力されます。
-- 数字以外が入力されるとエラーが表示されます
+- 数字以外が入力されるとエラーが表示されます。
 
 ## 必要なツールおよびテスト設定
 - Python
   - テスト済みバージョン→3.6~3.11
-  - windows11 wsl2(Ubuntu20.04 LTS)
+  - Windows11 WSL2 (Ubuntu-20.04 LTS)
 
 ## クローンの仕方
 ターミナルで次のコマンドを入力してリポジトリをクローンしてください。
 ```bash
-git clone https://github.com/yourusername/disney_anniversary.git
-cd disney_anniversary
+git clone https://github.com/makino315/robosys2024_work.git
+cd robosys2024_work
+chmod +x disney_anniversary
 ```
 
 ## 実行の仕方
 ターミナルで以下のコマンドを実行します。
 ```bash
-echo 2024 | python3 disney_anniversary
+echo 2024 | ./disney_anniversary
 ```
 これにより、ディズニーの設立年からの経過年数が出力されます。
 - 出力例
